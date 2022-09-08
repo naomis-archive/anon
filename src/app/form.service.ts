@@ -6,7 +6,7 @@ import { FormData } from '../assets/interfaces/FormData';
   providedIn: 'root',
 })
 export class FormService {
-  url = 'http://localhost:6080/ask';
+  url = 'https://anon-api.naomi.lgbt/ask';
 
   constructor(private http: HttpClient) {}
 
