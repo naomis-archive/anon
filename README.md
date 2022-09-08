@@ -1,12 +1,10 @@
-# Project Name
+# Naomi's Anonymous Inbox
 
-Project Description
+This is a web app designed to allow you to send anonymous messages to Naomi.
 
 ## Live Version
 
-This page is not yet deployed.
-
-<!--This page is currently deployed. [View the live website.]()-->
+This page is currently deployed. [View the live website.](https://anon.naomi.lgbt)
 
 ## Feedback and Bugs
 

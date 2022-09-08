@@ -1,0 +1,45 @@
+<div class="content">
+  <div class="nes-container with-title is-centered is-rounded">
+    <h1 class="title">Ask Naomi Anything!</h1>
+    <div *ngIf="!submitted">
+      <p>
+        This form gives you the opportunity to ask Naomi whatever anonymous
+        question is on your mind. She'll answer these questions on her Twitter
+        account!
+      </p>
+      <p>The username field is <strong>entirely optional</strong>!</p>
+      <p>
+        Note that these questions are sent to our
+        <a href="https://chat.nhcarrigan.com" target="_blank">Discord server</a>
+        and will be visible to all members. If you choose to share your
+        username, keep that in mind.
+      </p>
+      <form [formGroup]="questionForm" (ngSubmit)="onSubmit()">
+        <label
+          >Question:
+          <textarea
+            formControlName="question"
+            class="nes-textarea"
+            required
+          ></textarea>
+        </label>
+        <label
+          >Username:
+          <input type="text" class="nes-input" formControlName="user" />
+        </label>
+        <button class="nes-btn" type="submit">Submit</button>
+      </form>
+    </div>
+    <div *ngIf="submitted">
+      <p>
+        Thanks for sharing your question! Be sure to monitor Naomi's Twitter
+        account for the response!
+      </p>
+      <button (click)="reset()" class="nes-btn">Ask Another Question</button>
+    </div>
+    <div *ngIf="error">
+      <p>There was an error submitting your question:</p>
+      <p>{{ error }}</p>
+    </div>
+  </div>
+</div>
