@@ -1,0 +1,16 @@
+img {
+  width: min(250px, 100%);
+}
+
+.nes-btn.is-purple {
+  background-color: #d4abff;
+  color: black;
+}
+
+.nes-btn.is-purple:hover {
+  background-color: #7b6394;
+}
+
+.nes-btn.is-purple::after {
+  box-shadow: inset -4px -4px #7b6394;
+}

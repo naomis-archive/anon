@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
+import { Descriptions, Titles } from 'src/assets/interfaces/Enums';
+import { Category } from 'src/assets/interfaces/FormData';
 import { FormService } from '../form.service';
 
 @Component({
@@ -15,6 +17,9 @@ export class HomeComponent implements OnInit {
   public result = {};
   public error = '';
   public submitted = false;
+  public category: Category = 'question';
+  public title = Titles[this.category];
+  public description = Descriptions[this.category];
 
   constructor(
     private formService: FormService,
@@ -26,13 +31,14 @@ export class HomeComponent implements OnInit {
   onSubmit(): void {
     const question = this.questionForm.value.question;
     const user = this.questionForm.value.user || 'Anonymous';
+    const category = this.category;
 
     if (!question) {
       this.error = 'Please enter a question';
       return;
     }
 
-    this.formService.postForm({ question, user }).subscribe(
+    this.formService.postForm({ question, user, category }).subscribe(
       (data) => {
         console.log(data);
         this.result = data;
@@ -44,6 +50,12 @@ export class HomeComponent implements OnInit {
         this.submitted = false;
       }
     );
+  }
+
+  setCategory(category: Category): void {
+    this.category = category;
+    this.title = Titles[category];
+    this.description = Descriptions[category];
   }
 
   reset(): void {
