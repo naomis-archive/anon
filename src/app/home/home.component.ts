@@ -43,6 +43,7 @@ export class HomeComponent implements OnInit {
         console.log(data);
         this.result = data;
         this.submitted = true;
+        this.error = '';
       },
       (error) => {
         console.error(error);
