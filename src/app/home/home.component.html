@@ -7,7 +7,6 @@
         <button
           *ngIf="category !== 'question'"
           class="nes-btn is-purple"
-          id="question-button"
           (click)="setCategory('question')"
         >
           {{ buttons["question"] }}
@@ -15,7 +14,6 @@
         <button
           *ngIf="category !== 'confession'"
           class="nes-btn is-primary"
-          id="confess-button"
           (click)="setCategory('confession')"
         >
           {{ buttons["confession"] }}
@@ -23,7 +21,6 @@
         <button
           *ngIf="category !== 'flirt'"
           class="nes-btn is-error"
-          id="flirt-button"
           (click)="setCategory('flirt')"
         >
           {{ buttons["flirt"] }}
@@ -31,7 +28,6 @@
         <button
           *ngIf="category !== 'compliment'"
           class="nes-btn is-success"
-          id="compliment-button"
           (click)="setCategory('compliment')"
         >
           {{ buttons["compliment"] }}
@@ -39,7 +35,6 @@
         <button
           *ngIf="category !== 'never'"
           class="nes-btn is-warning"
-          id="never-button"
           (click)="setCategory('never')"
         >
           {{ buttons["never"] }}
