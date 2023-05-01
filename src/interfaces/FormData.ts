@@ -1,9 +1,4 @@
-export type Category =
-  | 'question'
-  | 'confession'
-  | 'flirt'
-  | 'compliment'
-  | 'never';
+import { Category } from './Category';
 
 export interface FormData {
   question: string;

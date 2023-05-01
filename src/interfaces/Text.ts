@@ -1,2 +1,3 @@
-export type View = 'question' | 'confession' | 'flirt' | 'compliment' | 'never';
-export type TextValues = { [key in View]: string };
+import { Category } from './FormData';
+
+export type TextValues = { [key in Category]: string };

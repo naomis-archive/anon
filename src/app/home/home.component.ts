@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
-import { Descriptions, Titles } from 'src/assets/interfaces/Enums';
-import { Category } from 'src/assets/interfaces/FormData';
+import { Buttons, Descriptions, Emotes, Titles } from 'src/config/Text';
+import { Category } from 'src/interfaces/Category';
 import { FormService } from '../form.service';
-import { Emotes } from 'src/assets/interfaces/Enums';
 
 @Component({
   selector: 'app-home',
@@ -21,6 +20,7 @@ export class HomeComponent implements OnInit {
   public category: Category = 'question';
   public title = Titles[this.category];
   public description = Descriptions[this.category];
+  public buttons = Buttons;
 
   public emote = Emotes[this.category];
 
