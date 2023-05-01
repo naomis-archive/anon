@@ -4,9 +4,3 @@ export type Category =
   | 'flirt'
   | 'compliment'
   | 'never';
-
-export interface FormData {
-  question: string;
-  user?: string;
-  category: Category;
-}

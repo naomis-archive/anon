@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { FormData } from '../assets/interfaces/FormData';
+import { FormData } from '../interfaces/FormData';
 
 @Injectable({
   providedIn: 'root',

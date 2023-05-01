@@ -9,38 +9,41 @@
           class="nes-btn is-purple"
           (click)="setCategory('question')"
         >
-          Ask a Question
+          {{ buttons["question"] }}
         </button>
         <button
           *ngIf="category !== 'confession'"
           class="nes-btn is-primary"
           (click)="setCategory('confession')"
         >
-          Confess a Secret
+          {{ buttons["confession"] }}
         </button>
         <button
           *ngIf="category !== 'flirt'"
           class="nes-btn is-error"
           (click)="setCategory('flirt')"
         >
-          Send a Romantic Message
+          {{ buttons["flirt"] }}
         </button>
         <button
           *ngIf="category !== 'compliment'"
           class="nes-btn is-success"
           (click)="setCategory('compliment')"
         >
-          Give a Compliment
+          {{ buttons["compliment"] }}
         </button>
         <button
           *ngIf="category !== 'never'"
           class="nes-btn is-warning"
           (click)="setCategory('never')"
         >
-          Never Have I Ever?
+          {{ buttons["never"] }}
         </button>
       </div>
-      <img src="https://cdn.naomi.lgbt/emotes/Naomi{{ emote }}.png" alt="category" />
+      <img
+        src="https://cdn.naomi.lgbt/emotes/Naomi{{ emote }}.png"
+        alt="category"
+      />
       <p>
         {{ description }}
       </p>
