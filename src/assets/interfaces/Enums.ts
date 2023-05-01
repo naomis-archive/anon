@@ -21,3 +21,11 @@ export enum Emotes {
   compliment = 'Blush',
   never = 'Huh',
 }
+
+export enum Buttons {
+  question = 'Ask a Question',
+  confession = 'Confess a secret',
+  flirt = 'Send a Romantic Message',
+  compliment = 'Give a Compliment',
+  never = 'Never Have I Ever?',
+}
