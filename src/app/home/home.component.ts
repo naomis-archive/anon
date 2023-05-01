@@ -3,6 +3,7 @@ import { FormBuilder } from '@angular/forms';
 import { Descriptions, Titles } from 'src/assets/interfaces/Enums';
 import { Category } from 'src/assets/interfaces/FormData';
 import { FormService } from '../form.service';
+import { Emotes } from 'src/assets/interfaces/Emotes';
 
 @Component({
   selector: 'app-home',
@@ -20,6 +21,8 @@ export class HomeComponent implements OnInit {
   public category: Category = 'question';
   public title = Titles[this.category];
   public description = Descriptions[this.category];
+
+  public emote = Emotes[this.category];
 
   constructor(
     private formService: FormService,
@@ -57,6 +60,7 @@ export class HomeComponent implements OnInit {
     this.category = category;
     this.title = Titles[category];
     this.description = Descriptions[category];
+    this.emote = Emotes[category];
   }
 
   reset(): void {
