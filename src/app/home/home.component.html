@@ -9,35 +9,35 @@
           class="nes-btn is-purple"
           (click)="setCategory('question')"
         >
-          {{ buttons.question }}
+          {{ buttons["question"] }}
         </button>
         <button
           *ngIf="category !== 'confession'"
           class="nes-btn is-primary"
           (click)="setCategory('confession')"
         >
-          {{ buttons.confession }}
+          {{ buttons["confession"] }}
         </button>
         <button
           *ngIf="category !== 'flirt'"
           class="nes-btn is-error"
           (click)="setCategory('flirt')"
         >
-          {{ buttons.flirt }}
+          {{ buttons["flirt"] }}
         </button>
         <button
           *ngIf="category !== 'compliment'"
           class="nes-btn is-success"
           (click)="setCategory('compliment')"
         >
-          {{ buttons.compliment }}
+          {{ buttons["compliment"] }}
         </button>
         <button
           *ngIf="category !== 'never'"
           class="nes-btn is-warning"
           (click)="setCategory('never')"
         >
-          {{ buttons.never }}
+          {{ buttons["never"] }}
         </button>
       </div>
       <img
