@@ -13,3 +13,11 @@ export enum Descriptions {
   compliment = 'This form gives you the opportunity to send Naomi a compliment. She might respond to your compliment on Twitter!',
   never = 'This form gives you the opportunity to play Never Has Naomi Ever with Naomi. Say something you have never done, and Naomi will say if she has or has not on Twitter!',
 }
+
+export enum Emotes {
+  question = 'Grin',
+  confession = 'Think',
+  flirt = 'Naomato',
+  compliment = 'Blush',
+  never = 'Huh',
+}

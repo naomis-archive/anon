@@ -3,7 +3,7 @@ import { FormBuilder } from '@angular/forms';
 import { Descriptions, Titles } from 'src/assets/interfaces/Enums';
 import { Category } from 'src/assets/interfaces/FormData';
 import { FormService } from '../form.service';
-import { Emotes } from 'src/assets/interfaces/Emotes';
+import { Emotes } from 'src/assets/interfaces/Enums';
 
 @Component({
   selector: 'app-home',
