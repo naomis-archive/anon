@@ -6,8 +6,6 @@ import { HomeComponent } from './home.component';
 import { Category } from 'src/interfaces/Category';
 import { Titles, Descriptions, Emotes, Buttons } from 'src/config/Text';
 
-
-
 describe('HomeComponent', () => {
   let component: HomeComponent;
   let fixture: ComponentFixture<HomeComponent>;
@@ -41,27 +39,33 @@ describe('HomeComponent', () => {
   });
 
   it('should render the question view correctly', () => {
-    validateView(component, fixture, compiled, categoryOrder, "question");
+    validateView(component, fixture, compiled, categoryOrder, 'question');
   });
 
   it('should render the confession view correctly', () => {
-    validateView(component, fixture, compiled, categoryOrder, "confession");
+    validateView(component, fixture, compiled, categoryOrder, 'confession');
   });
 
   it('should render the flirt view correctly', () => {
-    validateView(component, fixture, compiled, categoryOrder, "flirt");
+    validateView(component, fixture, compiled, categoryOrder, 'flirt');
   });
 
   it('should render the compliment view correctly', () => {
-    validateView(component, fixture, compiled, categoryOrder, "compliment");
+    validateView(component, fixture, compiled, categoryOrder, 'compliment');
   });
 
   it('should render the never view correctly', () => {
-    validateView(component, fixture, compiled, categoryOrder, "never");
+    validateView(component, fixture, compiled, categoryOrder, 'never');
   });
 });
 
-function validateView(component: HomeComponent, fixture: ComponentFixture<HomeComponent>, compiled: HTMLElement, categoryOrder: Category[], viewName: Category) {
+function validateView(
+  component: HomeComponent,
+  fixture: ComponentFixture<HomeComponent>,
+  compiled: HTMLElement,
+  categoryOrder: Category[],
+  viewName: Category
+) {
   component.setCategory(viewName);
   fixture.detectChanges();
   const title = compiled.querySelector('.title');
@@ -71,7 +75,7 @@ function validateView(component: HomeComponent, fixture: ComponentFixture<HomeCo
   expect(title?.textContent?.trim()).toBe(Titles[viewName]);
   expect(description?.textContent?.trim()).toBe(Descriptions[viewName]);
   expect(emote?.src).toBe(
-    `https://cdn.naomi.lgbt/emotes/Naomi${Emotes[viewName]}.png`
+    `https://cdn.nhcarrigan.com/anon/${Emotes[viewName]}.png`
   );
   // the fifth is the submit button
   expect(buttons?.length).toBe(5);
@@ -88,4 +92,3 @@ function validateView(component: HomeComponent, fixture: ComponentFixture<HomeCo
     Buttons[categoryOrder.filter((el) => el !== viewName)[3]]
   );
 }
-

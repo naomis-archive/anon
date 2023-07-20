@@ -22,11 +22,11 @@ export const Descriptions: TextValues = {
 };
 
 export const Emotes: TextValues = {
-  question: 'Grin',
-  confession: 'Think',
-  flirt: 'Naomato',
-  compliment: 'Blush',
-  never: 'Huh',
+  question: 'grin',
+  confession: 'think',
+  flirt: 'naomato',
+  compliment: 'blush',
+  never: 'huh',
 };
 
 export const Buttons: TextValues = {
